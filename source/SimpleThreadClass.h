@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdint.h>
+#include <string>
 #include <pthread.h>
 
 using namespace std;

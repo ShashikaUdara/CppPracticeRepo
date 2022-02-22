@@ -9,4 +9,6 @@ int main()
 	SimpleThreadClass* stc = new SimpleThreadClass();
 
 	stc->threadControlerFunction();
+	cout<<"Next"<<endl;
+	// stc->threadControllerStringPass(); // This function execution has been temporarily moved to the SimpleThreadClass.cpp
 }
