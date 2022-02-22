@@ -13,5 +13,6 @@ public:
 	~SimpleThreadClass();
 	void threadControlerFunction();
 	static void *basicThreadFunction(void *someValue);
-	
+	void threadControllerStringPass();
+	static void *stringPassThreadFunction(void* someString);
 };

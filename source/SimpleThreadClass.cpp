@@ -36,3 +36,30 @@ void* SimpleThreadClass :: basicThreadFunction(void *someValue)
 	cout<<"Thread# "<<iSomeVal<<": Executed"<<endl;
 	pthread_exit(NULL);
 }
+
+void SimpleThreadClass :: threadControllerStringPass()
+{
+	cout<<"SimpleThreadClass :: threadControllerStringPass"<<endl;
+	int x, iRetOfThreadCreate;
+	pthread_t threadsStringPass[THREAD_COUNT];
+
+	for(x=0; x<THREAD_COUNT; x++)
+	{
+		string strPassByRef = "ThreadItem" + x;
+
+		if(iRetOfThreadCreate = pthread_create(&threadsStringPass[x], NULL, stringPassThreadFunction, &strPassByRef))
+		{
+			cout<<"Can't create thread# "<<x<<" -- Status: "<<iRetOfThreadCreate<<endl;
+		}
+		cout<<"Thread# "<<x<<" Created -- Status "<<iRetOfThreadCreate<<endl;
+	}
+	pthread_exit(NULL);
+}
+
+void* SimpleThreadClass :: stringPassThreadFunction(void* someString)
+{
+	cout<<"SimpleThreadClass :: stringPassThreadFunction"<<endl;
+	string strSomeVal = *(string *)someString;
+	cout<<"New "<<strSomeVal<<" has been executed..."<<endl;
+	pthread_exit(NULL);
+}
