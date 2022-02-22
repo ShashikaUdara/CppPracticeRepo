@@ -5,7 +5,9 @@ sleep 1
 mkdir -p ../bin
 echo "directory created"
 sleep 1
-g++ ../source/main.cpp -o ../bin/fun.exe
+
+path="../source/"
+g++ ${path}main.cpp ${path}SimpleThreadClass.h ${path}SimpleThreadClass.cpp -lpthread -o ../bin/fun.exe
 echo "fun.exe created"
 sleep 1
 ../bin/fun.exe
