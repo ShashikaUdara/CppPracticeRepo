@@ -54,6 +54,7 @@ void SimpleThreadClass :: threadControllerStringPass()
 		}
 		cout<<"(2) Thread# "<<strPassByRef<<" Created -- Status "<<iRetOfThreadCreate<<endl;
 	}
+	threadControllerPassStruct();
 	pthread_exit(NULL);
 }
 
@@ -65,3 +66,48 @@ void* SimpleThreadClass :: stringPassThreadFunction(void* someString)
 	pthread_exit(NULL);
 }
 
+/*
+Following function 'threadControllerPassStruct()' gave me a segmantation fault (core dumped)
+The main reason for such segmantation fault is becuse my program is accessing a memory, which is not belongs to the program scope
+When a program tries to do read and write operation in a read only location or freed memory block, it's known as core dumped. It's and error indicating memory corruption.
+Following are common segmantation fault scenarios
+	* Modifying a string literal
+	* Accessing an address that is freed
+	* Accessing out of array index bounds
+	* Improper use of scanf()
+	* Stack Overflow
+	* Dereferencing uninitialized pointer 
+*/
+
+void SimpleThreadClass :: threadControllerPassStruct()
+{
+	cout<<"(3) SimpleThreadClass :: threadControllerPassStruct"<<endl;
+	int y, iReturnFromThreadCreate;
+
+	struct Demo structDemo[THREAD_COUNT];
+
+	pthread_t threadStructPass[THREAD_COUNT];
+
+	for(y=0; y<THREAD_COUNT; y++)
+	{
+		structDemo[y].thread_id = y+1;
+		// structDemo[y].message = "ThreadId#" + to_string(y+1);
+		sprintf(structDemo[y].message, "ThreadId#%d", y+1);
+
+		if(iReturnFromThreadCreate = pthread_create(&threadStructPass[y], NULL, structPassThreadFunction, &structDemo[y]))
+		{
+			cout<<"(3) Can't create thread#"<<y<<" due to the status: "<<iReturnFromThreadCreate<<endl;
+		}
+		cout<<"(3) Thread "<<y<<" created under the status "<<iReturnFromThreadCreate<<" of pthread_create"<<endl;
+	}
+
+	pthread_exit(NULL);
+}
+
+void* SimpleThreadClass :: structPassThreadFunction(void *someStruct)
+{
+	cout<<"(3) SimpleThreadClass :: structPassThreadFunction"<<endl;
+	struct Demo tempDemo = *(struct Demo *)someStruct;
+	cout<<"(3) tempDemo.thread_id:"<<tempDemo.thread_id<<" and tempDemo.message:"<<tempDemo.message<<endl;
+	pthread_exit(NULL);
+}

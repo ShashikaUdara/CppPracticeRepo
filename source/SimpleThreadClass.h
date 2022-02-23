@@ -7,6 +7,12 @@ using namespace std;
 
 #define THREAD_COUNT 10
 
+struct Demo
+{
+	int thread_id;
+	char *message;
+};
+
 class SimpleThreadClass
 {
 public:
@@ -16,4 +22,6 @@ public:
 	static void *basicThreadFunction(void *someValue);
 	void threadControllerStringPass();
 	static void *stringPassThreadFunction(void* someString);
+	void threadControllerPassStruct();
+	static void *structPassThreadFunction(void *someStruct);
 };
