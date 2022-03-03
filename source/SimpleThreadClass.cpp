@@ -81,7 +81,9 @@ Following are common segmantation fault scenarios
 
 void SimpleThreadClass :: threadControllerPassStruct()
 {
+	size_t strLen = 11;
 	cout<<"(3) SimpleThreadClass :: threadControllerPassStruct"<<endl;
+
 	int y, iReturnFromThreadCreate;
 
 	struct Demo structDemo[THREAD_COUNT];
@@ -91,7 +93,14 @@ void SimpleThreadClass :: threadControllerPassStruct()
 	for(y=0; y<THREAD_COUNT; y++)
 	{
 		structDemo[y].thread_id = y+1;
+
 		// structDemo[y].message = "ThreadId#" + to_string(y+1);
+		// allocating memory due to core dumped
+		if((structDemo[y].message = (char *)calloc(strLen, sizeof(char))) == NULL)
+		{
+			cout<<"************************** Can't allocate memory on index: "<<y<<endl;
+		}
+
 		sprintf(structDemo[y].message, "ThreadId#%d", y+1);
 
 		if(iReturnFromThreadCreate = pthread_create(&threadStructPass[y], NULL, structPassThreadFunction, &structDemo[y]))
@@ -99,6 +108,7 @@ void SimpleThreadClass :: threadControllerPassStruct()
 			cout<<"(3) Can't create thread#"<<y<<" due to the status: "<<iReturnFromThreadCreate<<endl;
 		}
 		cout<<"(3) Thread "<<y<<" created under the status "<<iReturnFromThreadCreate<<" of pthread_create"<<endl;
+		free(structDemo[y].message);
 	}
 
 	pthread_exit(NULL);

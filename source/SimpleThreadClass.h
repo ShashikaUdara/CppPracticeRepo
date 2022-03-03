@@ -24,4 +24,7 @@ public:
 	static void *stringPassThreadFunction(void* someString);
 	void threadControllerPassStruct();
 	static void *structPassThreadFunction(void *someStruct);
+
+private:
+	int debugCounter = 0;
 };
