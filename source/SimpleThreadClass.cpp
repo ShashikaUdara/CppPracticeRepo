@@ -121,3 +121,28 @@ void* SimpleThreadClass :: structPassThreadFunction(void *someStruct)
 	cout<<"(3) tempDemo.thread_id:"<<tempDemo.thread_id<<" and tempDemo.message:"<<tempDemo.message<<endl;
 	pthread_exit(NULL);
 }
+
+// Joining and Detaching Threads
+/*
+pthread_attr_t
+When you start a new thread, it can assume some well-defined defaults, or you can explicitly specify its characteristics.
+The thread attributes structure as follows.
+typedef struct {
+    int                 __flags;
+    size_t              __stacksize;
+    void                *__stackaddr;
+    void                (*__exitfunc)(void *status);
+    int                 __policy;
+    struct sched_param  __param;
+    unsigned            __guardsize;
+} pthread_attr_t;
+
+pthread_attr_init()
+Initialize a thread-attribute object
+
+pthread_attr_destroy()
+Destroy a thread-attribute object
+
+pthread_join 
+Wait for thread termination
+*/
