@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <string>
 #include <pthread.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -24,6 +25,8 @@ public:
 	static void *stringPassThreadFunction(void* someString);
 	void threadControllerPassStruct();
 	static void *structPassThreadFunction(void *someStruct);
+	void threadControlerPassStructWithJoin();
+	static void *structPassThreadFuncWithJoin(void *someval);
 
 private:
 	int debugCounter = 0;
