@@ -292,12 +292,41 @@ void SimpleThreadClass :: controlerFunction02()
 	}
 
 	pthread_attr_destroy(&attrDetached);
+	controler03();
 	pthread_exit(NULL);
 }
 
 void* SimpleThreadClass :: structPassPrexctice02(void* someStruct)
 {
 	struct Car* tempDemo = (struct Car *)someStruct;
+	sleep(2);
 	cout<<"(5) year: "<<tempDemo->year<<" name:"<<tempDemo->name<<endl;
+	pthread_exit(NULL);
+}
+
+
+// threads can be created as joinable(by default) and make them detached after the creation.
+// then no join will be needed.
+void SimpleThreadClass :: controler03()
+{
+	int i =0, iRet = 0;
+	pthread_t thread[THREAD_COUNT];
+
+	for(i=0;i<THREAD_COUNT;i++)
+	{
+		if(iRet = pthread_create(&thread[i], NULL, threadFunction03, NULL))
+		{
+			perror("can't create thread");
+			exit(-1);
+		}
+		cout<<"Thread created"<<endl;
+	}
+	pthread_exit(NULL);
+}
+
+void* SimpleThreadClass :: threadFunction03(void *)
+{
+	sleep(3);
+	cout<<"Thread function executes"<<endl;
 	pthread_exit(NULL);
 }

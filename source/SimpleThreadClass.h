@@ -35,6 +35,8 @@ public:
 	static void *structPassThreadFuncWithJoin(void *someval);
 	void controlerFunction02();
 	static void* structPassPrexctice02(void* someStruct);
+	void controler03();
+	static void* threadFunction03(void *);
 
 private:
 	int debugCounter = 0;
