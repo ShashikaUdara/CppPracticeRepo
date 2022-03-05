@@ -150,6 +150,8 @@ the value specified in detachstate.  The detach state attribute
 determines whether a thread created using the thread attributes
 object attr will be created in a joinable or a detached state.
 
+detach mean the thread has been de attached (seperated) from the main thread
+
 The following values may be specified in detachstate:
 
 * PTHREAD_CREATE_DETACHED
@@ -204,7 +206,10 @@ void SimpleThreadClass :: threadControlerPassStructWithJoin()
 	pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
 	cout<<"********* 2"<<endl;
 
-	struct Demo  *demo = (Demo *)calloc(capasity, sizeof(Demo));
+	// struct Demo  *demo = (Demo *)calloc(capasity, sizeof(Demo));
+	// or
+	Demo  *demo = new Demo;
+
 	cout<<"********* 3"<<endl;
 
 	for(i=0; i<THREAD_COUNT; i++)
@@ -213,7 +218,7 @@ void SimpleThreadClass :: threadControlerPassStructWithJoin()
 		demo->thread_id = i+1;
 		cout<<"********* 4"<<endl;
 
-		demo->message = (char *)calloc(50, sizeof(char));	
+		demo->message = (char *)calloc(50, sizeof(char));
 		sprintf(demo->message, "Thread string %d", i+1);
 		cout<<"********* 5"<<endl;
 		if(iRet = pthread_create(&thread[i], &attr, structPassThreadFuncWithJoin, demo))
@@ -241,9 +246,11 @@ void SimpleThreadClass :: threadControlerPassStructWithJoin()
 		}
 		cout<<"(4) Thread# ("<<i+1<<") execution completed - Status: "<<iRet<<endl;
 		cout<<"********* 11"<<endl;
+		controlerFunction02();
 		pthread_exit(NULL);
 	}
-	
+
+	delete demo;
 }
 
 void* SimpleThreadClass :: structPassThreadFuncWithJoin(void *someval)
@@ -254,5 +261,43 @@ void* SimpleThreadClass :: structPassThreadFuncWithJoin(void *someval)
 	sleep(1);
 	cout<<"ThreadId: "<<someValD->thread_id<<" and message: "<<someValD->message<<endl;
 	cout<<"********* 13"<<endl;
+	pthread_exit(NULL);
+}
+
+
+// practice 02
+void SimpleThreadClass :: controlerFunction02()
+{
+	int i = 0, iRet = 0;
+	struct Car* car = new Car;
+
+	pthread_t thread[THREAD_COUNT];
+
+	pthread_attr_t attrDetached;
+	pthread_attr_init(&attrDetached);
+	pthread_attr_setdetachstate(&attrDetached, PTHREAD_CREATE_DETACHED);
+
+	for(i=0; i<THREAD_COUNT; i++)
+	{
+		car->year = 2000 + i;
+		car->name = (char *)calloc(50, sizeof(char));
+		sprintf(car->name, "Car#%d", (i+1));
+
+		if(iRet = pthread_create(&thread[i], &attrDetached, structPassPrexctice02, car))
+		{
+			cout<<"(5) Can't create thread "<<i<<endl;
+			exit(-1);
+		}
+		cout<<"(5) Created the thread "<<i<<endl;
+	}
+
+	pthread_attr_destroy(&attrDetached);
+	pthread_exit(NULL);
+}
+
+void* SimpleThreadClass :: structPassPrexctice02(void* someStruct)
+{
+	struct Car* tempDemo = (struct Car *)someStruct;
+	cout<<"(5) year: "<<tempDemo->year<<" name:"<<tempDemo->name<<endl;
 	pthread_exit(NULL);
 }

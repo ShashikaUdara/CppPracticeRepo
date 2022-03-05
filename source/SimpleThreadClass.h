@@ -14,6 +14,12 @@ struct Demo
 	char *message;
 };
 
+struct Car
+{
+	int year;
+	char* name;
+};
+
 class SimpleThreadClass
 {
 public:
@@ -27,6 +33,8 @@ public:
 	static void *structPassThreadFunction(void *someStruct);
 	void threadControlerPassStructWithJoin();
 	static void *structPassThreadFuncWithJoin(void *someval);
+	void controlerFunction02();
+	static void* structPassPrexctice02(void* someStruct);
 
 private:
 	int debugCounter = 0;
