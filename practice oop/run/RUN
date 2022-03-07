@@ -1,0 +1,12 @@
+clear
+rm -r ../bin
+echo "remved old exe"
+mkdir -p ../bin
+echo "directory created"
+sleep 1
+
+src_path="../source/"
+g++ ${src_path}main.cpp -o ../bin/oop.exe
+echo "oop.exe created"
+sleep 1
+../bin/oop.exe
