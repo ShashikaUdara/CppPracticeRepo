@@ -20,3 +20,14 @@ string EncapsulationClass :: getEmployName()
 {
 	return eName;
 }
+
+void EncapsulationClass :: setCompanyName(string cName)
+{
+	cout<<"setCompanyName"<<endl;
+	this->cName = cName;
+}
+
+string EncapsulationClass :: getCompanyName()
+{
+	return cName;
+}

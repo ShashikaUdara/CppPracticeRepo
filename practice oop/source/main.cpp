@@ -14,4 +14,6 @@ int main()
 	EncapsulationClass* exampleObj = new EncapsulationClass();
 	exampleObj->setEmployName("Udara Abeyrathne");
 	cout<<"Employe name is "<<exampleObj->getEmployName()<<endl;
+	exampleObj->setCompanyName("Hitachi-DPS");
+	cout<<"Company name is "<<exampleObj->getCompanyName()<<endl;
 }

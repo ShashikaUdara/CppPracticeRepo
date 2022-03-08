@@ -18,7 +18,10 @@ public:
 	~EncapsulationClass();
 	void setEmployName(string name);
 	string getEmployName();
+	void setCompanyName(string cName);
+	string getCompanyName();
 
 private:
 	string eName = "";
+	string cName = "";
 };
