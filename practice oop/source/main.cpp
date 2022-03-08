@@ -1,5 +1,5 @@
 #include<iostream>
-#include "EncapsulationClass.h"
+#include"AnimalClass.h"
 
 using namespace std;
 
