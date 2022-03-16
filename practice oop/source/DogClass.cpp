@@ -1,8 +1,8 @@
 #include "DogClass.h"
 
-DogClass :: DogClass()
+DogClass :: DogClass(string someVal)
 {
-	cout<<"Constructor"<<endl;
+	cout<<"Constructor : DogClass - "<<someVal<<endl;
 }
 
 DogClass :: ~DogClass()
@@ -10,8 +10,8 @@ DogClass :: ~DogClass()
 	cout<<"Destructor"<<endl;
 }
 
-void DogClass :: wigleTale()
+string DogClass :: wigleTale()
 {
-	cout<<"wiggleTale()"<<endl;
+	// cout<<"wiggleTale()"<<endl;
 	return "Dog wiggle his tail";
 }

@@ -1,5 +1,6 @@
 #include<iostream>
-#include"AnimalClass.h"
+#include"DogClass.h"
+#include "EncapsulationClass.h"
 
 using namespace std;
 
@@ -16,4 +17,14 @@ int main()
 	cout<<"Employe name is "<<exampleObj->getEmployName()<<endl;
 	exampleObj->setCompanyName("Hitachi-DPS");
 	cout<<"Company name is "<<exampleObj->getCompanyName()<<endl;
+
+	DogClass* dog = new DogClass("from main");
+	dog->setMovement("Run");
+	cout<<"dog->getMovement(): "<<dog->getMovement()<<endl;
+	dog->setFood("Meat");
+	cout<<"dog->getFood(): "<<dog->getFood()<<endl;
+	dog->setSound("Bow wow");
+	cout<<"dog->getSound(): "<<dog->getSound()<<endl;
+	cout<<"dog->wigleTale(): "<<dog->wigleTale()<<endl;
+
 }

@@ -5,7 +5,7 @@ using namespace std;
 class DogClass : public AnimalClass
 {
 public:
-	DogClass();
+	DogClass(string someVal);
 	~DogClass();
-	void wigleTale();
+	string wigleTale();
 };
