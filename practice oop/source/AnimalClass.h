@@ -5,8 +5,8 @@ using namespace std;
 class AnimalClass
 {
 public:
-	// AnimalClass(string someVal);
-	// ~AnimalClass();
+	AnimalClass(string someVal);
+	~AnimalClass();
 	void setMovement(string move);
 	string getMovement();
 	void setFood(string food);

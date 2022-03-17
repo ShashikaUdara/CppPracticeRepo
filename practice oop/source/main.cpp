@@ -18,7 +18,7 @@ int main()
 	exampleObj->setCompanyName("Hitachi-DPS");
 	cout<<"Company name is "<<exampleObj->getCompanyName()<<endl;
 
-	DogClass* dog = new DogClass("from main");
+	DogClass* dog = new DogClass("SOme value");
 	dog->setMovement("Run");
 	cout<<"dog->getMovement(): "<<dog->getMovement()<<endl;
 	dog->setFood("Meat");

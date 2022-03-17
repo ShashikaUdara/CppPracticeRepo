@@ -1,6 +1,6 @@
 #include "DogClass.h"
 
-DogClass :: DogClass(string someVal)
+DogClass :: DogClass(string someVal) : AnimalClass(someVal)
 {
 	cout<<"Constructor : DogClass - "<<someVal<<endl;
 }

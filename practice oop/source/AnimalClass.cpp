@@ -1,14 +1,14 @@
 #include"AnimalClass.h"
 
-// AnimalClass :: AnimalClass(string someVal)
-// {
-// 	cout<<"Constructor : AnimalClass - "<<someVal<<endl;
-// }
+AnimalClass :: AnimalClass(string someVal)
+{
+	cout<<"Constructor : AnimalClass - "<<someVal<<endl;
+}
 
-// AnimalClass :: ~AnimalClass()
-// {
-// 	cout<<"Distructor"<<endl;
-// }
+AnimalClass :: ~AnimalClass()
+{
+	cout<<"Distructor"<<endl;
+}
 
 void AnimalClass :: setMovement(string move)
 {
