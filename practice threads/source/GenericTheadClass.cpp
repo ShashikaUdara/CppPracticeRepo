@@ -34,7 +34,7 @@ void GenericTheadClass:: threadControllerFunction()
 	for(i=0; i<THREAD_COUNT; i++)
 	{
 		book->csBookName = (char *)calloc(50, sizeof(char));
-		sprintf(book->csBookName, "book_%d", i+1);
+		sprintf(book->csBookName, "book_%d", i);
 		book->iPageCount = i+100;
 		if(iRet = pthread_create(&thread[i], &attr, threadFunction, book))
 		{
@@ -53,14 +53,17 @@ void GenericTheadClass:: threadControllerFunction()
 			cout<<"thread #"<<i<<" can't join - status: "<<iRet<<endl;
 			exit(-2);
 		}
-		pthread_exit(NULL);
+		cout<<"thread #"<<i<<" - join completed"<<endl;
 	}
+	pthread_exit(NULL);
 }
 
 void* GenericTheadClass:: threadFunction(void* bookData)
 {
 	struct Book* bookPassed = (struct Book*)bookData;
+	sleep(2);
 	cout<<"threadFunction"<<endl;
+	sleep(2);
 	cout<<"csBookName: "<<bookPassed->csBookName<<" and iPageCount: "<<bookPassed->iPageCount<<endl;
 	pthread_exit(NULL);
 }

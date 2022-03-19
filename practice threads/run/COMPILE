@@ -1,0 +1,11 @@
+clear
+rm -r ../bin
+echo "remved old exe"
+sleep 1
+mkdir -p ../bin
+echo "directory created"
+sleep 1
+
+path="../source/"
+g++ ${path}main.cpp ${path}SimpleThreadClass.h ${path}SimpleThreadClass.cpp ${path}GenericTheadClass.h ${path}GenericTheadClass.cpp -lpthread -o ../bin/fun.exe
+echo "fun.exe created"
