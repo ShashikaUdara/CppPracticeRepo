@@ -2,6 +2,7 @@
 #include"DogClass.h"
 #include "CatClass.h"
 #include "EncapsulationClass.h"
+#include "Mango.h"
 
 using namespace std;
 
@@ -32,9 +33,21 @@ int main()
 	CatClass* cat = new CatClass("Some cat value");
 	cat->setMovement("Cat walk");
 	cout<<"cat->getMovement(): "<<cat->getMovement()<<endl;
+<<<<<<< HEAD
+	cat->setFood(string food);
+	cout<<"cat->getFood(): "<<cat->getFood()<<endl;
+	cat->setSound(string sound);
+=======
 	cat->setFood("Fish");
 	cout<<"cat->getFood(): "<<cat->getFood()<<endl;
 	cat->setSound("Miyaw");
+>>>>>>> 220525b20af8a46aed54f6f44301bc789f33a26e
 	cout<<"cat->getSound(): "<<cat->getSound()<<endl;
 	cout<<"cat->sayMeyow(): "<<cat->sayMeyow()<<endl;
+
+	// multiple inheritance 
+	Mango* mango = new Mango("is a Fruit", "a Vegetable");
+	mango->isSweet();
+	mango->hasSmell("Mango smell");
+	mango->canCook("Mango can cook");
 }
