@@ -1,3 +1,6 @@
+#ifndef _DOGCLASS_H_
+#define _DOGCLASS_H_
+
 #include"AnimalClass.h"
 
 using namespace std;
@@ -9,3 +12,5 @@ public:
 	~DogClass();
 	string wigleTale();
 };
+
+#endif

@@ -1,3 +1,5 @@
+#ifndef _ANIMALCLASS_H_
+#define _ANIMALCLASS_H_
 #include<iostream>
 
 using namespace std;
@@ -20,3 +22,5 @@ private:
 	string food = "";
 	string sound = "";
 };
+
+#endif

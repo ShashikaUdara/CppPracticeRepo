@@ -30,11 +30,11 @@ int main()
 
 	// multilevel inheritance
 	CatClass* cat = new CatClass("Some cat value");
-	setMovement("Cat walk");
+	cat->setMovement("Cat walk");
 	cout<<"cat->getMovement(): "<<cat->getMovement()<<endl;
-	setFood(string food);
+	cat->setFood("Fish");
 	cout<<"cat->getFood(): "<<cat->getFood()<<endl;
-	setSound(string sound);
+	cat->setSound("Miyaw");
 	cout<<"cat->getSound(): "<<cat->getSound()<<endl;
 	cout<<"cat->sayMeyow(): "<<cat->sayMeyow()<<endl;
 }

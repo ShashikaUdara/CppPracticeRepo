@@ -5,6 +5,8 @@ class variables/attributes as private (cannot be accessed from outside the class
 If you want others to read or modify the value of a private member, you can provide 
 public get and set methods.
 */
+#ifndef _ENCAPSULATIONCLASS_H_
+#define _ENCAPSULATIONCLASS_H_
 
 #include <iostream>
 #include <string>
@@ -25,3 +27,5 @@ private:
 	string eName = "";
 	string cName = "";
 };
+
+#endif
