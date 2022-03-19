@@ -1,6 +1,6 @@
 #include "Mango.h"
 
-Mango :: Mango(string sFr, string sVege) : Fruit(sFr), Mango(sVege)
+Mango :: Mango(string sFr, string sVege) : Fruit(sFr), Vegetable(sVege)
 {
 	cout<<"Constructor - Mango: "<<sFr<< " and "<<sVege<<endl;
 }

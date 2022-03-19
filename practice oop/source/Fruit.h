@@ -1,4 +1,7 @@
 // C++ Multiple Inheritance
+#ifndef _FRUIT_H_
+#define _FRUIT_H_
+
 #include <iostream>
 
 using namespace std;
@@ -10,3 +13,5 @@ public:
 	~Fruit();
 	void hasSmell(string sSmell);
 };
+
+#endif

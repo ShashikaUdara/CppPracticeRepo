@@ -1,3 +1,6 @@
+#ifndef _VEGETABLE_H_
+#define _VEGETABLE_H_
+
 #include <iostream>
 
 using namespace std;
@@ -9,3 +12,5 @@ public:
 	~Vegetable();
 	void canCook(string sFood);
 };
+
+#endif
