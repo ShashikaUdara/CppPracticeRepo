@@ -1,5 +1,6 @@
 #include<iostream>
 #include"DogClass.h"
+#include "CatClass.h"
 #include "EncapsulationClass.h"
 
 using namespace std;
@@ -18,7 +19,7 @@ int main()
 	exampleObj->setCompanyName("Hitachi-DPS");
 	cout<<"Company name is "<<exampleObj->getCompanyName()<<endl;
 
-	DogClass* dog = new DogClass("SOme value");
+	DogClass* dog = new DogClass("Some dog value");
 	dog->setMovement("Run");
 	cout<<"dog->getMovement(): "<<dog->getMovement()<<endl;
 	dog->setFood("Meat");
@@ -27,4 +28,13 @@ int main()
 	cout<<"dog->getSound(): "<<dog->getSound()<<endl;
 	cout<<"dog->wigleTale(): "<<dog->wigleTale()<<endl;
 
+	// multilevel inheritance
+	CatClass* cat = new CatClass("Some cat value");
+	setMovement("Cat walk");
+	cout<<"cat->getMovement(): "<<cat->getMovement()<<endl;
+	setFood(string food);
+	cout<<"cat->getFood(): "<<cat->getFood()<<endl;
+	setSound(string sound);
+	cout<<"cat->getSound(): "<<cat->getSound()<<endl;
+	cout<<"cat->sayMeyow(): "<<cat->sayMeyow()<<endl;
 }
