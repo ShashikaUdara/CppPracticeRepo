@@ -3,6 +3,7 @@
 #include "CatClass.h"
 #include "EncapsulationClass.h"
 #include "Mango.h"
+#include "FileManager.h"
 
 using namespace std;
 
@@ -58,4 +59,8 @@ int main()
 	dc->polyExample();
 	cc->polyExample();
 
+	// C++ Files
+	FileManager* fm = new FileManager("Text from main to constructor");
+	fm->writeFileExample("This will be printed in the text file");
+	fm->readFileExample();
 }
