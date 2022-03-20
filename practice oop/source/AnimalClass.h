@@ -15,6 +15,7 @@ public:
 	string getFood();
 	void setSound(string sound);
 	string getSound();
+	void polyExample();
 
 
 private:

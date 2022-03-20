@@ -11,6 +11,7 @@ public:
 	CatClass(string someVal);
 	~CatClass();
 	string sayMeyow();
+	void polyExample();
 };
 
 #endif

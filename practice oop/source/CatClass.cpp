@@ -15,3 +15,8 @@ string CatClass :: sayMeyow()
 	// cout<<"wiggleTale()"<<endl;
 	return "Cat say meyaw";
 }
+
+void CatClass :: polyExample()
+{
+	cout<<"void CatClass :: polyExample()"<<endl;
+}

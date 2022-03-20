@@ -47,4 +47,15 @@ int main()
 
 	// C++ Inheritance Access - Access Specifiers
 	mango->accessProtectedProperties();
+
+	// C++ Polymorphism
+	// Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
+	AnimalClass* ac = new AnimalClass("Main to Animal Class");
+	DogClass* dc = new DogClass("Main to Dog Class");
+	CatClass* cc = new CatClass("Main to Cat Class");
+
+	ac->polyExample();
+	dc->polyExample();
+	cc->polyExample();
+
 }

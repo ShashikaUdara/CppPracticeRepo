@@ -11,6 +11,7 @@ public:
 	DogClass(string someVal);
 	~DogClass();
 	string wigleTale();
+	void polyExample();
 };
 
 #endif

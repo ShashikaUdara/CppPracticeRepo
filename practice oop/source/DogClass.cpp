@@ -15,3 +15,8 @@ string DogClass :: wigleTale()
 	// cout<<"wiggleTale()"<<endl;
 	return "Dog wiggle his tail";
 }
+
+void DogClass :: polyExample()
+{
+	cout<<"void DogClass :: polyExample()"<<endl;
+}

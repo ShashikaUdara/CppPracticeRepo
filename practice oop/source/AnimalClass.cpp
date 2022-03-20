@@ -42,3 +42,8 @@ string AnimalClass :: getSound()
 {
 	return this->sound;
 }
+
+void AnimalClass :: polyExample()
+{
+	cout<<"void AnimalClass :: polyExample()"<<endl;
+}
