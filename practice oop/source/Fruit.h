@@ -12,6 +12,11 @@ public:
 	Fruit(string sFruit);
 	~Fruit();
 	void hasSmell(string sSmell);
+
+protected:
+	string protectedFruit();
+
+	string sFruitDefinition = "Fruits are the means by which flowering plants (also known as angiosperms) disseminate their seeds";
 };
 
 #endif

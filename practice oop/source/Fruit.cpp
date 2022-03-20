@@ -14,3 +14,9 @@ void Fruit :: hasSmell(string sSmell)
 {
 	cout<<"Fruit :: hasSmell(string sSmell) - "<<sSmell<<endl;
 }
+
+// protected function
+string Fruit :: protectedFruit()
+{
+	return "This is protectedFruit()";
+}

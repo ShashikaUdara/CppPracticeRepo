@@ -13,6 +13,7 @@ public:
 	Mango(string sFr, string sVege);
 	~Mango();
 	void isSweet();
+	void accessProtectedProperties();
 };
 
 #endif

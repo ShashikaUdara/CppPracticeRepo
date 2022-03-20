@@ -44,4 +44,7 @@ int main()
 	mango->isSweet();
 	mango->hasSmell("Mango smell");
 	mango->canCook("Mango can cook");
+
+	// C++ Inheritance Access - Access Specifiers
+	mango->accessProtectedProperties();
 }

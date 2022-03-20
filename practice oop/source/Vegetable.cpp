@@ -14,3 +14,10 @@ void Vegetable :: canCook(string sFood)
 {
 	cout<<"Vegetable :: canCook(string sFood) - "<<sFood<<endl;
 }
+
+
+// protected function
+string Vegetable :: protectedVegetable()
+{
+	return "This is protectedVegetable()";
+}
