@@ -4,6 +4,7 @@
 #include "EncapsulationClass.h"
 #include "Mango.h"
 #include "FileManager.h"
+#include "ExceptionHandlingExamples.h"
 
 using namespace std;
 
@@ -63,4 +64,10 @@ int main()
 	FileManager* fm = new FileManager("Text from main to constructor");
 	fm->writeFileExample("This will be printed in the text file");
 	fm->readFileExample();
+
+	// C++ Exceptions
+	ExceptionHandlingExamples* ehe = new ExceptionHandlingExamples();
+	ehe->basicExample();
+	ehe->basicExceptionHandling2();
+	ehe->handleAnyException();
 }
