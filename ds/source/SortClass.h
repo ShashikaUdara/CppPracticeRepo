@@ -10,8 +10,9 @@ class SortClass
 public:
 	SortClass();
 	~SortClass();
-	int* bubble(int* iarrInput, int count);
-
+	int* bubbleSort(int* iarrInput, int count);
+	int* quickSort(int* iarrInput, int low, int high);
+	int partition(int* iarrInput, int low, int high);
 };
 
 #endif
