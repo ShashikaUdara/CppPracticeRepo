@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void showVal(CopyConstructorEx objCC)
+void showVal(CopyConstructorEx &objCC)
 {
 	cout<<"Value: "<<objCC.getVal()<<endl;
 }
@@ -21,4 +21,7 @@ int main()
 	// calling copy constructor created class
 	CopyConstructorEx cc(481);
 	showVal(cc);
+
+	CopyConstructorEx c_cc(cc);
+	showVal(c_cc);
 }

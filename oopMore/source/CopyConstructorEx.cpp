@@ -12,6 +12,7 @@ CopyConstructorEx :: CopyConstructorEx(const CopyConstructorEx &obj)
 	cout<<"CopyConstructorEx - Copy Constructor"<<endl;
 	ptrVal = new int;
 	*ptrVal = *obj.ptrVal;
+	cout<<"ptrVal: 	"<<*obj.ptrVal<<endl;
 }
 
 CopyConstructorEx :: ~CopyConstructorEx()
