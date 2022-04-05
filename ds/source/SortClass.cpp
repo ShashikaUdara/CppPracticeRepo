@@ -58,10 +58,10 @@ int SortClass :: partition(int* iarrInput, int low, int high)
 	int i = low-1;
 	int j = 0, iTemp = 0;
 	// cout<<"7"<<endl;
-	int iPivote = iarrInput[high];
+	int iPivote = iarrInput[high-1];
 	cout<<"iPivote- "<<iPivote<<endl;
 
-	for(j=0; j<high-1; j++)
+	for(j=0; j<high; j++)
 	{
 		// cout<<iPivote<<" 9"<<endl;
 		if(iarrInput[j] <= iPivote)
