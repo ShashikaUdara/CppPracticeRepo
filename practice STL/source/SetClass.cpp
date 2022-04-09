@@ -50,5 +50,13 @@ void SetClass :: setBasics()
 		cout<<"not found 80"<<endl;
 	else
 		cout<<"upper bound 80 = "<<*it3<<endl;
+
+	// eracing set values
+	setDemo.erase(76);
+	setDemo.erase(65);
+	setDemo.erase(44);
 	
+	for(auto x : setDemo)
+		cout<<x<<" ";
+	cout<<endl;
 }

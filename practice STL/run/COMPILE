@@ -6,6 +6,6 @@ echo "directory created"
 sleep 1
 
 src_path="../source/"
-g++ ${src_path}main.cpp ${src_path}VectorClass.h ${src_path}VectorClass.cpp ${src_path}SetClass.h ${src_path}SetClass.cpp -o ../bin/oop.exe
+g++ ${src_path}main.cpp ${src_path}VectorClass.h ${src_path}VectorClass.cpp ${src_path}SetClass.h ${src_path}SetClass.cpp ${src_path}MapClass.h ${src_path}MapClass.cpp -o ../bin/oop.exe
 
 echo "oop.exe created"

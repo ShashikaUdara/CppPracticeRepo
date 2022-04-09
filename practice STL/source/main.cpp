@@ -2,6 +2,7 @@
 #include <iostream>
 #include "VectorClass.h"
 #include "SetClass.h"
+#include "MapClass.h"
 
 using namespace std;
 
@@ -12,4 +13,6 @@ int main()
 	vecObj.vectorBasics();
 	SetClass setObj;
 	setObj.setBasics();
+	MapClass mapObj;
+	mapObj.mapBasics();
 }
