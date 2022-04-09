@@ -59,13 +59,15 @@ void VectorClass :: vectorBasics()
 	cout<<"upper bound of 100- "<<*it4<<endl;
 	cout<<"it4 - it3: "<<it4 - it3<<endl;
 
-	// looping threough the vctor
+	cout<<"not using reference variable"<<endl;
 	for(int x : A)
 	{
+		x++;
 		cout<< x << " ";
 	}
 	cout<<"\n";
 
+	// looping threough the vctor
 	vector<int> :: iterator it5;
 	for(it5 = A.begin(); it5 != A.end(); it5++)
 	{
@@ -77,6 +79,21 @@ void VectorClass :: vectorBasics()
 	for(it6 = A.begin(); it6 != A.end(); it6++)
 	{
 		cout<< *it6 << " ";
+	}
+	cout<<"\n";
+
+	// altering the values while iterating
+	for(int &x : A)
+	{
+		x++;
+		cout<<x<<" ";
+	}
+	cout<<"\n";
+
+	cout<<"iterating again"<<endl;
+	for(int &x : A)
+	{
+		cout<<x<<" ";
 	}
 	cout<<"\n";
 }
