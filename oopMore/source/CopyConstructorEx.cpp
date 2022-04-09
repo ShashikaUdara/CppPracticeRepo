@@ -17,7 +17,7 @@ CopyConstructorEx :: CopyConstructorEx(const CopyConstructorEx &obj)
 
 CopyConstructorEx :: ~CopyConstructorEx()
 {
-	cout<<"CopyConstructorEx - Distructor"<<endl;
+	cout<<"Freeing memory"<<endl;
 	delete ptrVal;
 }
 

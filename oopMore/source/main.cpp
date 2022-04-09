@@ -22,6 +22,6 @@ int main()
 	CopyConstructorEx cc(481);
 	showVal(cc);
 
-	CopyConstructorEx c_cc(cc);
-	showVal(c_cc);
+	// CopyConstructorEx c_cc(cc);
+	// showVal(c_cc);
 }
