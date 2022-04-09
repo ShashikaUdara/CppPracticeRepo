@@ -64,15 +64,19 @@ void Animal :: print() const
 
 int main()
 {
+	// default constructor invoke
 	Animal a;
 	a.print();
 
+	// overloaded constructor invoke
 	const Animal b("cat", "mase", "meoww");
 	b.print();
 
+	// copy constructor invoke
 	const Animal c = b;
 	c.print();
 
+	// copy oprtator invoke
 	a=c;
 	a.print();
 }
