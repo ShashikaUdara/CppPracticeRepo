@@ -7,6 +7,9 @@ class C
 	int _value = 0;
 	C();
 public:
+	// explicit key word stands to ensure that the constructor is not mistaenly do implicit conversions.
+	// explicit C(const int & val) : _value(val) {}
+
 	C(const int & val) : _value(val) {}
 	void setV(const int & val) {_value=val;}
 	int getV() const {return _value;}
