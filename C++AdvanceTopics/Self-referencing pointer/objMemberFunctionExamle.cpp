@@ -46,4 +46,14 @@ int main()
 	printf("getV()- %d\n", temp);
 	temp = o2.getV2();
 	printf("getV2()- %d\n", temp);
+
+	// default copy constructor
+	// even though the previous object is copied by the newly created object, the refernece is different
+	C o3 = o1;
+	o3.setV(i);
+	printf("address of o3 - %p\n", &o3);
+	temp = o3.getV();
+	printf("getV()- %d\n", temp);
+	temp = o3.getV2();
+	printf("getV2()- %d\n", temp);
 }  
