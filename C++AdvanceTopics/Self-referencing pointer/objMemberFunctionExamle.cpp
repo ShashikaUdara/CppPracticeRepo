@@ -38,4 +38,12 @@ int main()
 	printf("getV()- %d\n", temp);
 	temp = o1.getV2();
 	printf("getV2()- %d\n", temp);
+
+	C o2;
+	o2.setV(i);
+	printf("address of o2 - %p\n", &o2);
+	temp = o2.getV();
+	printf("getV()- %d\n", temp);
+	temp = o2.getV2();
+	printf("getV2()- %d\n", temp);
 }  
