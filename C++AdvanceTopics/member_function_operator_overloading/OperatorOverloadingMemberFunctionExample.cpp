@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdio>
 
 using namespace std;
 
@@ -9,7 +10,7 @@ class Rational
 public:
 	Rational(int numarator = 0, int denominator = 1) : _n(numarator), _d(denominator) {} // overloaded constructor
 	Rational(const Rational & rhs): _n(rhs._n), _d(rhs._d) {} // copy constructor
-	~Rational() {} // destructor
+	~Rational(); // destructor
 
 	int numarator() const {return _n;}
 	int denominator() const {return _d;}
@@ -53,7 +54,13 @@ Rational Rational :: operator / (const Rational & rhs) const
 	return Rational(_n*rhs._n, _d*rhs._d);
 }
 
-std::ostream & operator << (const std::ostream & o, const Rational & r)
+Rational :: ~Rational()
+{
+	_n = 0;
+	_d = 1;
+}
+
+std::ostream & operator << (std::ostream & o, const Rational & r)
 {
 	if(r.denominator() == 1)
 		return o << r.numarator();
