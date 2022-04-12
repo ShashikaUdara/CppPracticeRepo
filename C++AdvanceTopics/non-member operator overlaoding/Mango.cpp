@@ -63,7 +63,10 @@ std::ostream operator << (std::ostream & o, const Mango & m)
 	}
 }
 
-
+Mango operator + (const Mango & lhs, const Mango & rhs)
+{
+	return Mango((lhs.numarator()*rhs.denominator() + lhs.denominator()*rhs.numarator()), lhs.denominator()*rhs.denominator());
+}
 
 
 int main()
