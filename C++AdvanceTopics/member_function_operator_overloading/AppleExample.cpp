@@ -32,12 +32,12 @@ Apple & Apple :: operator = (const Apple & rhs)
 
 Apple Apple :: operator + (const Apple & rhs)
 {
-	return Apple((_n*rhs._d - _d*rhs._n) , _d*rhs._d);
+	return Apple((_n*rhs._d + _d*rhs._n) , _d*rhs._d);
 }
 
 Apple Apple :: operator - (const Apple & rhs)
 {
-	return Apple((_n*rhs._d + _d*rhs._n) , _d*rhs._d);
+	return Apple((_n*rhs._d - _d*rhs._n) , _d*rhs._d);
 }
 
 Apple Apple :: operator * (const Apple & rhs)
