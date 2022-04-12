@@ -15,7 +15,7 @@ public:
 
 	// operator overload goes here
 	Mango & operator = (const Mango & rhs);
-	Mango operator + (const Mango & rhs) const;
+	// Mango operator + (const Mango & rhs) const;
 	Mango operator - (const Mango & rhs) const;
 	Mango operator * (const Mango & rhs) const;
 	Mango operator / (const Mango & rhs) const;
@@ -31,10 +31,10 @@ Mango & Mango :: operator = (const Mango & rhs)
 	return *this;
 }
 
-Mango Mango :: operator + (const Mango & rhs) const
-{
-	return Mango((_n*rhs._d + _d*rhs._n), _d*rhs._d);
-}
+// Mango Mango :: operator + (const Mango & rhs) const
+// {
+// 	return Mango((_n*rhs._d + _d*rhs._n), _d*rhs._d);
+// }
 
 Mango Mango :: operator - (const Mango & rhs) const
 {
@@ -51,7 +51,7 @@ Mango Mango :: operator / (const Mango & rhs) const
 	return Mango(_n*rhs._n, _d*rhs._d);
 }
 
-std::ostream operator << (std::ostream & o, const Mango & m)
+std::ostream & operator << (std::ostream & o, const Mango & m)
 {
 	if(m.denominator() == 1)
 	{
