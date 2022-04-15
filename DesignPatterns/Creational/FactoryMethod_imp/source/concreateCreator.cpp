@@ -36,3 +36,33 @@ public:
 		cout<<"Heat and foam milk"<<endl;
 	}
 }
+
+
+class CoffeeMakerFactory
+{
+private:
+	Coffee * coffee;
+public:
+	Coffee * getCoffee()
+	{
+		// purpose is to return the intended coffee option depending on the user input
+		int choice;
+
+		cout<<"Select the coffee type:"<<endl;
+		cout<<"1: Espresso"<<endl;
+		cout<<"2: Cappuccino"<<endl;
+		cin>>choice;
+	}
+
+	switch(choice)
+	{
+		case 1:
+			return new Espresso;
+		case 2:
+			return new Cappuccino;
+		default:
+			cout<<"Invealied selection"<<endl;
+			return NULL;
+	}
+
+};
