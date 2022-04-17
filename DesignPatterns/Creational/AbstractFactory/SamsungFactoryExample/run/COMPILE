@@ -1,0 +1,11 @@
+clear
+rm -r ../bin
+echo "remved old exe"
+mkdir -p ../bin
+echo "directory created"
+sleep 1
+
+src_path="../source/"
+g++ ${src_path}VolumnController.h ${src_path}TelevisionVolumnController.h ${src_path}RadioVolumnController.h ${src_path}PhoneVolumnController.h ${src_path}SamsungPhone.h ${src_path}SamsungRadio.h ${src_path}SamsungTelevision.h ${src_path}SamsungFactory.h ${src_path}SamsungTelevision.cpp ${src_path}SamsungPhone.cpp ${src_path}SamsungRadio.cpp ${src_path}Button.h ${src_path}TelevisionButtons.h ${src_path}RadioButtons.h ${src_path}PhoneButtons.h ${src_path}Speaker.h ${src_path}TelevisionSpeakers.h ${src_path}RadioSpeakers.h ${src_path}PhoneSpeakers.h ${src_path}main.cpp -o ../bin/oop.exe
+
+echo "oop.exe created"
