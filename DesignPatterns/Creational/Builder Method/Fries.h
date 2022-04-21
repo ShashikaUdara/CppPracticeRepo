@@ -1,8 +1,19 @@
+#ifndef _FRIES_H_
+#define _FRIES_H_
+
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
-int main()
+class Fries
 {
-	cout<<"it's main"<<endl;
-}
+	public:
+		Fries()
+		{
+			cout<<"Putting slized potato in the rowling oill.\nPut seasoning on top of fries"<<endl;
+			strcpy(_side, "Fries");
+		}
+};
+
+#endif
