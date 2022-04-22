@@ -3,10 +3,11 @@
 
 #include <iostream>
 #include <cstring>
+#include "Entree.h"
 
 using namespace std;
 
-class HotDog
+class HotDog : public Entree
 {
 	public:
 		HotDog()

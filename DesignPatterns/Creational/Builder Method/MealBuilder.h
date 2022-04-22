@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class MealBuilde
+class MealBuilder
 {
 	protected:
 		ComboMeal * _meal;

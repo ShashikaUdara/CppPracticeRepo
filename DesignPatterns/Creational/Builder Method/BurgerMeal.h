@@ -3,14 +3,14 @@
 
 #include <iostream>
 #include <cstring>
-#include "MealBuilde.h"
+#include "MealBuilder.h"
 #include "Burger.h"
-#include "Side.h"
+#include "Fries.h"
 #include "Drink.h"
 
 using namespace std;
 
-class BurgerMeal
+class BurgerMeal : public MealBuilder
 {
 	public:
 		BurgerMeal()
@@ -26,8 +26,8 @@ class BurgerMeal
 
 		void cookSide()
 		{
-			Side * side = new Side;
-			_meal->setSide(side);
+			Fries * fries = new Fries;
+			_meal->setSide(fries);
 		}
 
 		void fillDrink()

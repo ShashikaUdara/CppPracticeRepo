@@ -3,14 +3,14 @@
 
 #include <iostream>
 #include <cstring>
-#include "MealBuilde.h"
+#include "MealBuilder.h"
 #include "HotDog.h"
 #include "Salad.h"
 #include "Drink.h"
 
 using namespace std;
 
-class HotDogMeal
+class HotDogMeal : public MealBuilder
 {
 	public:
 		HotDogMeal()

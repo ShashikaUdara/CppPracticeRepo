@@ -3,10 +3,11 @@
 
 #include <iostream>
 #include <cstring>
+#include "Entree.h"
 
 using namespace std;
 
-class Burger
+class Burger : public Entree
 {
 	public:
 		Burger()
