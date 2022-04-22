@@ -1,5 +1,5 @@
-#ifndef _SIDE_H_
-#define _SIDE_H_
+#ifndef _SALAD_H_
+#define _SALAD_H_
 
 #include <iostream>
 #include <cstring>
@@ -8,8 +8,6 @@ using namespace std;
 
 class Salad
 {
-	protected:
-		char _side[15];
 	public:
 		Salad()
 		{
