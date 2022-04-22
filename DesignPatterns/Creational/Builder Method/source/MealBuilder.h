@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cstring>
+#include "ComboMeal.h"
 
 using namespace std;
 

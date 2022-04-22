@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <cstring>
+#include "Entree.h"
+#include "Side.h"
+#include "Drink.h"
 
 using namespace std;
 
@@ -15,10 +18,10 @@ class ComboMeal
 		char _bag[100];
 		
 	public:
-		ComboMeal()
+		ComboMeal(const char * type)
 		{
 			cout<<"Prepearing the combo meal"<<endl;
-			strcpy(_bag, "Combo Meal: ");
+			sprintf(_bag, "Combo Meal: %s", type);
 		}
 
 		void setEntree(Entree * e)

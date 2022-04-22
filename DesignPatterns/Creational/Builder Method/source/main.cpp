@@ -1,6 +1,8 @@
 #include <iostream>
 #include "ComboMeal.h"
 #include "MealBuilder.h"
+#include "BurgerMeal.h"
+#include "HotDogMeal.h"
 
 using namespace std;
 
@@ -35,6 +37,6 @@ int main()
 		cook->cookSide();
 		cook->fillDrink();
 		meal = cook->getMeal();
-		cout<<meal->openMealBag();<<endl;
+		cout<<meal->openMealBag()<<endl;
 	}
 }
