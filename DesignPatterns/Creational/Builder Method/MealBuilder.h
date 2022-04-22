@@ -9,20 +9,15 @@ using namespace std;
 class MealBuilde
 {
 	protected:
-		Entree * entree;
-		Side * side;
-		Drink * drink;
-		
-	public:
-		MealBuilde()
-		{
-			cout<<"Filling the coup of drink"<<endl;
-			strcpy(_drink, "soda");
-		}
+		ComboMeal * _meal;
 
-		char * getDrink()
+	public:
+		virtual void cookEntree() {};
+		virtual void cookSide() {};
+		virtual void fillDrink() {};
+		ComboMeal * getMeal()
 		{
-			return _drink;
+			return _meal;
 		}
 };
 
