@@ -26,11 +26,11 @@ public:
 
 	void setBook(Book * b) { book = b; }
 	void setPen(Pen * p) { pen = p; }
-	void setBook(Lunch * l) { lunch = l; }
+	void setLunch(Lunch * l) { lunch = l; }
 
 	const char * showBag()
 	{
-		spritf(_bag, "%s %s %s %s", _bag, book->getBook(), pen->getPen(), lunch->getLunch());
+		sprintf(_bag, "%s %s %s %s", _bag, book->getBook(), pen->getPen(), lunch->getLunch());
 		return _bag;
 	}
 };

@@ -1,5 +1,9 @@
 #include <iostream>
 #include <cstring>
+#include "BagBuilder.h"
+#include "SchoolBag.h"
+#include "PracticeBag.h"
+#include "CampingBag.h"
 
 using namespace std;
 
@@ -20,13 +24,13 @@ int main()
 	switch(choice)
 	{
 		case 1:
-			bag_builder = new School("School Bag");
+			bag_builder = new SchoolBag;
 			break;
 		case 2:
-			bag_builder = new Practice("Practice Bag");
+			bag_builder = new PracticeBag;
 			break;
-		case 1:
-			bag_builder = new Camping("Camping Bag");
+		case 3:
+			bag_builder = new CampingBag;
 			break;
 		default:
 			cout<<"Wrong input"<<endl;

@@ -1,5 +1,5 @@
-#ifndef _PEN_H_
-#define _PEN_H_
+#ifndef _MAKER_PEN_H_
+#define _MAKER_PEN_H_
 
 #include <iostream>
 #include <cstring>
