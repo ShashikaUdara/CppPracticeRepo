@@ -4,6 +4,11 @@
 #include <iostream>
 #include <cstring>
 #include "Bag.h"
+#include "Book.h"
+#include "Pen.h"
+#include "Lunch.h"
+
+using namespace std;
 
 class Bag
 {

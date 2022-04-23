@@ -5,6 +5,8 @@
 #include <cstring>
 #include "Bag.h"
 
+using namespace std;
+
 class BagBuilder
 {
 protected:

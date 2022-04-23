@@ -1,0 +1,11 @@
+clear
+rm -r ../bin
+echo "remved old exe"
+mkdir -p ../bin
+echo "directory created"
+sleep 1
+
+src_path="../source/"
+g++ ${src_path}PracticeBag.h ${src_path}SchoolBag.h ${src_path}CampingBag.h ${src_path}BagBuilder.h ${src_path}main.cpp ${src_path}Bag.h ${src_path}Pen.h ${src_path}Book.h ${src_path}MapBook.h ${src_path}NoteBook.h ${src_path}LessionBook.h ${src_path}KnifePen.h ${src_path}BallpointPen.h ${src_path}MarkerPen.h ${src_path}Lunch.h ${src_path}Rice.h ${src_path}Sanwich.h ${src_path}DryFood.h -o ../bin/oop.exe
+
+echo "oop.exe created"

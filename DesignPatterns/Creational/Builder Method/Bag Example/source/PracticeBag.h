@@ -8,6 +8,8 @@
 #include "MarkerPen.h"
 #include "Sanwich.h"
 
+using namespace std;
+
 class PracticeBag : public BagBuilder
 {
 public:

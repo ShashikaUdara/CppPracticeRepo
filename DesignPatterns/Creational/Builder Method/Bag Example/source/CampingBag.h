@@ -8,6 +8,8 @@
 #include "KnifePen.h"
 #include "DryFood.h"
 
+using namespace std;
+
 class CampingBag : public BagBuilder
 {
 public:

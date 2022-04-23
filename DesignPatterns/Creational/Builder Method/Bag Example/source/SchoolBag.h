@@ -8,6 +8,8 @@
 #include "BallpointPen.h"
 #include "Rice.h"
 
+using namespace std;
+
 class SchoolBag : public BagBuilder
 {
 public:
