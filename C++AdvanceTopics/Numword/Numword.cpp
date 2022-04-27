@@ -7,5 +7,5 @@ int main()
 {
 	cout<<"it's main"<<endl;
 	bw::NumNames name;
-	name.words(1234512345123451234);
+	name.words(991);
 }

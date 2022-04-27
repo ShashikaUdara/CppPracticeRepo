@@ -5,6 +5,7 @@
 #include <cstring>
 #include <string>
 #include <inttypes.h>
+#include <map>
 
 namespace bw
 {
@@ -120,19 +121,182 @@ namespace bw
 		char _error[10] = "Error";
 		unsigned int numLength;
 
+		std::map<std::string, std::string> names;
+
 	public:
+		void setMap()
+		{
+			names.insert(std::pair<std::string, std::string>("1", "one"));
+			names.insert(std::pair<std::string, std::string>("2", "two"));
+			names.insert(std::pair<std::string, std::string>("3", "three"));
+			names.insert(std::pair<std::string, std::string>("4", "four"));
+			names.insert(std::pair<std::string, std::string>("5", "five"));
+			names.insert(std::pair<std::string, std::string>("6", "six"));
+			names.insert(std::pair<std::string, std::string>("7", "seven"));
+			names.insert(std::pair<std::string, std::string>("8", "eight"));
+			names.insert(std::pair<std::string, std::string>("9", "nine"));
+			names.insert(std::pair<std::string, std::string>("10", "ten"));
+			names.insert(std::pair<std::string, std::string>("11", "eleven"));
+			names.insert(std::pair<std::string, std::string>("12", "twelve"));
+			names.insert(std::pair<std::string, std::string>("13", "thirteen"));
+			names.insert(std::pair<std::string, std::string>("14", "fourteen"));
+			names.insert(std::pair<std::string, std::string>("15", "fifteen"));
+			names.insert(std::pair<std::string, std::string>("16", "sixteen"));
+			names.insert(std::pair<std::string, std::string>("17", "seventeen"));
+			names.insert(std::pair<std::string, std::string>("18", "eighteen"));
+			names.insert(std::pair<std::string, std::string>("19", "nineteen"));
+			names.insert(std::pair<std::string, std::string>("20", "twenty"));
+			names.insert(std::pair<std::string, std::string>("21", "twenty-one"));
+			names.insert(std::pair<std::string, std::string>("22", "twenty-two"));
+			names.insert(std::pair<std::string, std::string>("23", "twenty-three"));
+			names.insert(std::pair<std::string, std::string>("24", "twenty-four"));
+			names.insert(std::pair<std::string, std::string>("25", "twenty-five"));
+			names.insert(std::pair<std::string, std::string>("26", "twenty-six"));
+			names.insert(std::pair<std::string, std::string>("27", "twenty-seven"));
+			names.insert(std::pair<std::string, std::string>("28", "twenty-eight"));
+			names.insert(std::pair<std::string, std::string>("29", "twenty-nine"));
+			names.insert(std::pair<std::string, std::string>("30", "thirty"));
+			names.insert(std::pair<std::string, std::string>("31", "thirty-one"));
+			names.insert(std::pair<std::string, std::string>("32", "thirty-two"));
+			names.insert(std::pair<std::string, std::string>("33", "thirty-three"));
+			names.insert(std::pair<std::string, std::string>("34", "thirty-four"));
+			names.insert(std::pair<std::string, std::string>("35", "thirty-five"));
+			names.insert(std::pair<std::string, std::string>("36", "thirty-six"));
+			names.insert(std::pair<std::string, std::string>("37", "thirty-seven"));
+			names.insert(std::pair<std::string, std::string>("38", "thirty-eight"));
+			names.insert(std::pair<std::string, std::string>("39", "thirty-nine"));
+			names.insert(std::pair<std::string, std::string>("40", "forty"));
+			names.insert(std::pair<std::string, std::string>("41", "forty-one"));
+			names.insert(std::pair<std::string, std::string>("42", "forty-two"));
+			names.insert(std::pair<std::string, std::string>("43", "forty-three"));
+			names.insert(std::pair<std::string, std::string>("44", "forty-four"));
+			names.insert(std::pair<std::string, std::string>("45", "forty-five"));
+			names.insert(std::pair<std::string, std::string>("46", "forty-six"));
+			names.insert(std::pair<std::string, std::string>("47", "forty-seven"));
+			names.insert(std::pair<std::string, std::string>("48", "forty-eight"));
+			names.insert(std::pair<std::string, std::string>("49", "forty-nine"));
+			names.insert(std::pair<std::string, std::string>("50", "fifty"));
+			names.insert(std::pair<std::string, std::string>("51", "fifty-one"));
+			names.insert(std::pair<std::string, std::string>("52", "fifty-two"));
+			names.insert(std::pair<std::string, std::string>("53", "fifty-three"));
+			names.insert(std::pair<std::string, std::string>("54", "fifty-four"));
+			names.insert(std::pair<std::string, std::string>("55", "fifty-five"));
+			names.insert(std::pair<std::string, std::string>("56", "fifty-six"));
+			names.insert(std::pair<std::string, std::string>("57", "fifty-seven"));
+			names.insert(std::pair<std::string, std::string>("58", "fifty-eight"));
+			names.insert(std::pair<std::string, std::string>("59", "fifty-nine"));
+			names.insert(std::pair<std::string, std::string>("60", "sixty"));
+			names.insert(std::pair<std::string, std::string>("61", "sixty-one"));
+			names.insert(std::pair<std::string, std::string>("62", "sixty-two"));
+			names.insert(std::pair<std::string, std::string>("63", "sixty-three"));
+			names.insert(std::pair<std::string, std::string>("64", "sixty-four"));
+			names.insert(std::pair<std::string, std::string>("65", "sixty-five"));
+			names.insert(std::pair<std::string, std::string>("66", "sixty-six"));
+			names.insert(std::pair<std::string, std::string>("67", "sixty-seven"));
+			names.insert(std::pair<std::string, std::string>("68", "sixty-eight"));
+			names.insert(std::pair<std::string, std::string>("69", "sixty-nine"));
+			names.insert(std::pair<std::string, std::string>("70", "seventy"));
+			names.insert(std::pair<std::string, std::string>("71", "seventy-one"));
+			names.insert(std::pair<std::string, std::string>("72", "seventy-two"));
+			names.insert(std::pair<std::string, std::string>("73", "seventy-three"));
+			names.insert(std::pair<std::string, std::string>("74", "seventy-four"));
+			names.insert(std::pair<std::string, std::string>("75", "seventy-five"));
+			names.insert(std::pair<std::string, std::string>("76", "seventy-six"));
+			names.insert(std::pair<std::string, std::string>("77", "seventy-seven"));
+			names.insert(std::pair<std::string, std::string>("78", "seventy-eight"));
+			names.insert(std::pair<std::string, std::string>("79", "seventy-nine"));
+			names.insert(std::pair<std::string, std::string>("80", "eighty"));
+			names.insert(std::pair<std::string, std::string>("81", "eighty-one"));
+			names.insert(std::pair<std::string, std::string>("82", "eighty-two"));
+			names.insert(std::pair<std::string, std::string>("83", "eighty-three"));
+			names.insert(std::pair<std::string, std::string>("84", "eighty-four"));
+			names.insert(std::pair<std::string, std::string>("85", "eighty-five"));
+			names.insert(std::pair<std::string, std::string>("86", "eighty-six"));
+			names.insert(std::pair<std::string, std::string>("87", "eighty-seven"));
+			names.insert(std::pair<std::string, std::string>("88", "eighty-eight"));
+			names.insert(std::pair<std::string, std::string>("89", "eighty-nine"));
+			names.insert(std::pair<std::string, std::string>("90", "ninety"));
+			names.insert(std::pair<std::string, std::string>("91", "ninety-one"));
+			names.insert(std::pair<std::string, std::string>("92", "ninety-two"));
+			names.insert(std::pair<std::string, std::string>("93", "ninety-three"));
+			names.insert(std::pair<std::string, std::string>("94", "ninety-four"));
+			names.insert(std::pair<std::string, std::string>("95", "ninety-five"));
+			names.insert(std::pair<std::string, std::string>("96", "ninety-six"));
+			names.insert(std::pair<std::string, std::string>("97", "ninety-seven"));
+			names.insert(std::pair<std::string, std::string>("98", "ninety-eight"));
+			names.insert(std::pair<std::string, std::string>("99", "ninety-nine"));
+			names.insert(std::pair<std::string, std::string>("100", "hundred"));
+			names.insert(std::pair<std::string, std::string>("1000", "thousend"));
+			names.insert(std::pair<std::string, std::string>("1000000", "million"));
+			names.insert(std::pair<std::string, std::string>("1000000000", "billion"));
+			names.insert(std::pair<std::string, std::string>("1000000000000", "trillion"));
+		}
+
 		char * words(uint64_t num)
 		{
+			int i = 0;
+			setMap();
 			sprintf(_numBuffer, "%" PRIu64 "", num);
 			numLength = (unsigned)strlen(_numBuffer);
 			printf("Length of the enterd number: %u\n", numLength);
-			if(numLength > 13)
+			// if(numLength > 13)
+			// {
+			// 	return _error;
+			// }
+
+			for(i=0; i<numLength; i++)
 			{
-				return _error;
+				std::cout<<_numBuffer[i]<<std::endl;
 			}
 
-			// if(numLength)
+			std::cout<<"sayName- "<<sayName(_numBuffer, numLength)<<std::endl;
 			return _num12;
+		}
+
+		char * sayName(char * cNum, int len)
+		{
+			std::cout<<cNum<<std::endl;
+			std::string sNum = std::string(cNum);
+			char * cRet = (char *)malloc(20);
+
+			std::map<std::string, std::string> :: iterator it;
+
+			for(it=names.begin(); it!=names.end(); ++it)
+			{
+				std::cout<<it->first<<" - "<<it->second<<std::endl;
+			}
+
+			if(len == 2)
+			{
+				sprintf(cRet, "%s", (names.find(sNum)->second).c_str());
+				return cRet;
+			}
+
+			getString(sNum, 1, 3);
+
+			if(len == 3)
+			{
+				sprintf(cRet, "%s%s", (names.find(sNum)->second).c_str(), _and);
+				return cRet;
+			}
+
+			// while(getString())
+
+
+			return cNum;
+		}
+
+		std::string getString(std::string str, int start, int end)
+		{
+			int i=0;
+			std::string buffer = "";
+			for(i=start; i<=(end-start); i++)
+			{
+				std::cout<<"str - "<<str[i]<<std::endl;
+				buffer += str[i];
+			}
+			std::cout<<"buffer - "<<buffer<<std::endl;
+			return buffer;
 		}
 	};
 }
