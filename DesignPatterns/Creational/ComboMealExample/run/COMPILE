@@ -9,8 +9,3 @@ src_path="../source/"
 g++ ${src_path}main.cpp ${src_path}MealCombo.h ${src_path}MealCombo.cpp ${src_path}Entree.cpp ${src_path}Entree.h ${src_path}Drink.h ${src_path}Side.h ${src_path}Side.cpp ${src_path}Drink.cpp -o ../bin/oop.exe
 
 echo "oop.exe created"
-
-
-
-
-${src_path}main.cpp ${src_path}MealCombo.h ${src_path}MealCombo.cpp ${src_path}Entree.cpp ${src_path}Entree.h ${src_path}Drink.h ${src_path}Side.h ${src_path}Side.cpp ${src_path}Drink.cpp

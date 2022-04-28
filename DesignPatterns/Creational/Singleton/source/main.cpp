@@ -8,10 +8,10 @@ int main()
 	cout<<"it's main"<<endl;
 
 	// this doesen't work since the Leader constructor is private
-	Leader * lead = new Leader();
-	lead->giveSpeach();
+	// Leader * lead = new Leader();
+	// lead->giveSpeach();
 
 	Leader :: getLeader()->giveSpeach();
 
-	return;
+	return 0;
 }

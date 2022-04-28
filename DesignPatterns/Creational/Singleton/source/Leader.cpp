@@ -1,6 +1,6 @@
 #include "Leader.h"
 
-static Leader * Leader :: getLeader()
+Leader * Leader :: getLeader()
 {
 	if(_leader == NULL)
 	{

@@ -1,0 +1,12 @@
+clear
+rm -r ../bin
+echo "removed the old exe"
+mkdir -p ../bin
+echo "bin directory create"
+sleep 1
+src_path="../source/"
+exe_path="../bin/"
+
+g++ ${src_path}main.cpp ${src_path}Leader.h ${src_path}Leader.cpp -o ${exe_path}app.exe
+
+echo "app.exe created"
