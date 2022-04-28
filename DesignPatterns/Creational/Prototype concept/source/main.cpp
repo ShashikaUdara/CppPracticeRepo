@@ -34,4 +34,5 @@ int main()
 	// give a sheep a hair cut
 	sheep->shearing();
 	farm[0] = sheep->clone();
+
 }
