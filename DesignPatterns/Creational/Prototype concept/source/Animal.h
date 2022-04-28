@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Animal()
+class Animal
 {
 protected:
 	char _hairColor[10];

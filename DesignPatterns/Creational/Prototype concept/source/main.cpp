@@ -1,4 +1,7 @@
 #include <iostream>
+#include "Animal.h"
+#include "Sheep.h"
+#include "Cow.h"
 
 using namespace std;
 
@@ -23,7 +26,7 @@ int main()
 
 	// populating a farm
 	farm[0] = sheep->clone();
-	farm[1]->cow->clone();
+	farm[1] = cow->clone();
 
 	// changing cows property
 	farm[1]->setWeight(1000);

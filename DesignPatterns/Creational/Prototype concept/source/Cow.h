@@ -2,6 +2,7 @@
 #define _COW_H_
 
 #include <iostream>
+#include "Animal.h"
 
 using namespace std;
 

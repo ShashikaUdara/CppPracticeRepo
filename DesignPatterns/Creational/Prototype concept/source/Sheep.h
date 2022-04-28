@@ -2,6 +2,7 @@
 #define _SHEEP_H_
 
 #include <iostream>
+#include "Animal.h"
 
 using namespace std;
 
@@ -21,7 +22,7 @@ public:
 		return new Sheep(*this);
 	}
 
-	void shearing()
+	int shearing()
 	{
 		_hairLength -= 2;
 		return _hairLength;
