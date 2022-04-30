@@ -25,15 +25,15 @@ void MergeSort :: merge(int arr[], int l, int m, int r)
 	int i = 0, j = 0, k=0;
 	for(i=0; i<nl; i++)
 	{
-		left[i] = arr[i];
+		left[i] = arr[l+i];
 	}
 
 	for(j=0; j<nr; j++)
 	{
-		right[j] = arr[i+m+1];
+		right[j] = arr[j+m+1];
 	}
 
-	i = 0, j = 0, k=0;
+	i = 0, j = 0, k=l;
 	// merging goes here
 	while(i < nl && j < nr)
 	{
