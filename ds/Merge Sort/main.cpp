@@ -9,10 +9,10 @@ int main()
 	int arr[] = {5 ,6, 7, 3, 8, 1};
 
 	MergeSort * _mergeSort;
-	_mergeSort->mergeSort(arr, 0, 6);
+	_mergeSort->mergeSort(arr, 0, 5);
 
 	int i=0;
-	for(i=0; i<6; i++)
+	for(i=0; i<5; i++)
 	{
 		cout<<arr[i]<<endl;
 		cout<<"1"<<endl;

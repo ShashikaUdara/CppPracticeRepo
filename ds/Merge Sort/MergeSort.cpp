@@ -2,19 +2,13 @@
 
 void MergeSort :: mergeSort(int arr[], int l, int r)
 {
-	int m = 0;
-
 	if(l < r)
 	{
-		m = (r - l + 1)/2;
-		usleep(1000);
+		int m = l + (r - l)/2;
 		mergeSort(arr, l, m); // left side array
-		cout<<"3"<<endl;
 		mergeSort(arr, m+1, r); // right side array
-		cout<<"4"<<endl;
 
 		merge(arr, l, m, r);
-		cout<<"5"<<endl;
 	}
 }
 
@@ -34,9 +28,9 @@ void MergeSort :: merge(int arr[], int l, int m, int r)
 		left[i] = arr[i];
 	}
 
-	for(j=0; j<nr; i++)
+	for(j=0; j<nr; j++)
 	{
-		left[j] = arr[i+m+1];
+		right[j] = arr[i+m+1];
 	}
 
 	i = 0, j = 0, k=0;
