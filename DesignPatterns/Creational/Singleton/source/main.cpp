@@ -12,6 +12,8 @@ int main()
 	// lead->giveSpeach();
 
 	Leader :: getLeader()->giveSpeach();
+	Leader * elected = elected->getLeader();
+	elected->giveSpeach();
 
 	return 0;
 }
