@@ -43,7 +43,7 @@ int* SortClass :: quickSort(int* iarrInput, int low, int high)
 		// cout<<"2"<<endl;
 		pi = partition(iarrInput, low, high);
 		// cout<<"3"<<endl;
-		quickSort(iarrInput, low, pi);
+		quickSort(iarrInput, low, pi-1);
 		// cout<<"4"<<endl;
 		quickSort(iarrInput, pi+1, high);
 		// cout<<"5"<<endl;
@@ -58,10 +58,10 @@ int SortClass :: partition(int* iarrInput, int low, int high)
 	int i = low-1;
 	int j = 0, iTemp = 0;
 	// cout<<"7"<<endl;
-	int iPivote = iarrInput[high-1];
+	int iPivote = iarrInput[high];
 	cout<<"iPivote- "<<iPivote<<endl;
 
-	for(j=0; j<high; j++)
+	for(j=low; j<=high-1; j++)
 	{
 		// cout<<iPivote<<" 9"<<endl;
 		if(iarrInput[j] <= iPivote)

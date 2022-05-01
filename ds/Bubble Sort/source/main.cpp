@@ -39,6 +39,6 @@ int main()
   displayArray(array2, iSize);
 
   cout<<"============== After Quick Sort =============="<<endl;
-  int* sortedPtr = sort->quickSort(array2, 0, iSize);
+  int* sortedPtr = sort->quickSort(array2, 0, iSize-1);
   displayArray(sortedPtr, iSize);
 }
